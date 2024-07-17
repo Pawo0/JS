@@ -1,0 +1,67 @@
+body{
+    background-color: gray;
+    font-family: "Comic Sans", serif;
+}
+#container{
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+header{
+    font-size: 3em;
+    text-align: center;
+}
+#screen{
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 50px;
+    font-family: monospace;
+    font-size: 3em;
+}
+#buttons{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.btn{
+    height: 70%;
+    width: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    border: black solid 2px;
+    color: white;
+    font-weight: bold;
+}
+.btn:hover{
+    cursor: pointer;
+    filter: brightness(85%);
+}
+.btn:active{
+    filter: brightness(70%);
+}
+#btn1{
+    background-color: green;
+}
+#btn2{
+    background-color: red;
+}
+#btn3{
+    background-color: blue;
+}
+
+#results{
+    min-height: 100px;
+}
+.res{
+    padding: 2px;
+}
