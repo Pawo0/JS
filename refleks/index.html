@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Refleks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="container">
+        <div id="settings">
+            <label>Length:
+                <input type="number" id="length" value="10" class="setting_input">
+            </label>
+            <label>Time between click:
+                form
+                <input type="number" id="time_min" value="0.5" class="setting_input">
+                to
+                <input type="number" id="time_max" value="3" class="setting_input">
+            </label>
+            <label>Ball size:
+                from
+                <input type="number" id="size_min" value="1" class="setting_input">
+                to
+                <input type="number" id="size_max" value="4" class="setting_input">
+            </label>
+            <button onclick="showMenu()">SAVE & BACK</button>
+            <button onclick="resetSett()">RESET</button>
+        </div>
+        <div id="menu">
+            <span id = "info_score">Last score: <span id="score">0</span> s</span>
+            <button onclick="showSettings()" id="btn_settings">SETTINGS</button>
+            <button onclick="startGame()">START</button>
+        </div>
+        <div id="catch_me"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
