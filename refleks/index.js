@@ -51,12 +51,12 @@ function startGame() {
 function play() {
     if (cnt < len) {
         // let duration = Math.random() * 3 + 0.5;
-        let duration = Math.random() * (time_max.value - time_min.value) + time_min.value;
+        let duration = Math.random() * (parseInt(time_max.value) - parseInt(time_min.value)) + parseInt(time_min.value);
         setTimeout(display, duration * 1000);
         cnt += 1;
     } else {
         res = sum / cnt / 1000;
-        score.textContent = res;
+        score.textContent = res.toFixed(3);
         menu.style.display = "flex";
     }
 }
@@ -68,7 +68,7 @@ let y;
 
 function display() {
     start = Date.now();
-    size = Math.random() * (size_max.value - size_min.value) + size_min.value;
+    size = Math.random() * (parseInt(size_max.value) - parseInt(size_min.value)) + parseInt(size_min.value);
     x = Math.random() * (window.innerHeight - size * 10);
     y = Math.random() * (window.innerWidth - size * 10);
     catch_me.style.width = size * 10 + "px";
