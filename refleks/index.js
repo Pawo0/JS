@@ -3,7 +3,9 @@ const size_min = document.getElementById("size_min");
 const size_max = document.getElementById("size_max");
 const time_min = document.getElementById("time_min");
 const time_max = document.getElementById("time_max");
-
+const ball_preview = document.getElementById("ball_preview");
+const catch_me_prev_min = document.getElementById("catch_me_prev_min");
+const catch_me_prev_max = document.getElementById("catch_me_prev_max");
 
 const catch_me = document.getElementById("catch_me");
 const menu = document.getElementById("menu");
@@ -19,18 +21,32 @@ let len;
 window.addEventListener("DOMContentLoaded", () => {
     resetSett();
     showMenu();
-    menu.style.display = "flex";
+    // showSettings();
 });
 
 function showSettings() {
     menu.style.display = "none";
     settings.style.display = "flex";
+    intervalId = setInterval(prev_look, 100);
 }
+
 
 function showMenu() {
     menu.style.display = "flex";
     settings.style.display = "none";
+    clearInterval(intervalId);
 }
+
+
+function prev_look() {
+    let min_size = size_min.value;
+    let max_size = size_max.value;
+    catch_me_prev_min.style.width = min_size * 10 + "px";
+    catch_me_prev_min.style.height = min_size * 10 + "px";
+    catch_me_prev_max.style.width = max_size * 10 + "px";
+    catch_me_prev_max.style.height = max_size * 10 + "px";
+}
+
 
 function resetSett() {
     length.value = 10;

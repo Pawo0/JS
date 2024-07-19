@@ -9,15 +9,40 @@ body {
     padding: 0;
 }
 
-#catch_me {
-    width: 50px;
-    height: 50px;
+#catch_me, #catch_me_prev_min, #catch_me_prev_max {
+    width: 10px;
+    height: 40px;
     background-color: limegreen;
     border-radius: 50%;
     position: absolute;
     left: 0;
     top: 0;
     visibility: hidden;
+}
+
+#catch_me_prev_min {
+    visibility: visible;
+    position: initial;
+}
+#catch_me_prev_max {
+    visibility: visible;
+    position: initial;
+}
+#balls_prev{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#ball_preview {
+    min-width: 200px;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 

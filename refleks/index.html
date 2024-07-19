@@ -9,6 +9,7 @@
 
     <div id="container">
         <div id="settings">
+            <h1>Settings</h1>
             <label>Length:
                 <input type="number" id="length" value="10" class="setting_input">
             </label>
@@ -24,9 +25,19 @@
                 to
                 <input type="number" id="size_max" value="4" class="setting_input">
             </label>
-            <button onclick="showMenu()">SAVE & BACK</button>
+
             <button onclick="resetSett()">RESET</button>
+            <button onclick="showMenu()">SAVE & BACK</button>
+
+            <div id="ball_preview">
+                <h4 style="text-align: center">Ball preview</h4>
+                <div id="balls_prev">
+                    <div id="catch_me_prev_min"></div>
+                    <div id="catch_me_prev_max"></div>
+                </div>
+            </div>
         </div>
+
         <div id="menu">
             <span id = "info_score">Last score: <span id="score">0</span> s</span>
             <button onclick="showSettings()" id="btn_settings">SETTINGS</button>
