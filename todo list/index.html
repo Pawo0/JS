@@ -11,24 +11,11 @@
         <div id="add_panel">
             <label>
                 <input type="text" id="add_text" placeholder="Add your task">
-                <button id="add_btn">Add</button>
+                <button id="add_btn" onclick="add_to_list()">Add</button>
             </label>
         </div>
         <div id="content">
-            <ul>
-                <li class="task">
-                    <label>
-                        <input type="checkbox" class="task_chk"> <span class="checkmark"></span><span class="text_task">Some task 1</span>
-                    </label>
-                    <span class="del_task">✖</span>
-                </li>
-                <li class="task">
-                    <label>
-                        <input type="checkbox" class="task_chk"> <span class="checkmark"></span><span class="text_task">Some task 2</span>
-                    </label>
-                    <span class="del_task">✖</span>
-                </li>
-
+            <ul id="tasks">
             </ul>
         </div>
     </div>
