@@ -44,3 +44,12 @@ body {
 .matched {
     background-color: #a19a9a;
 }
+#restartBtn{
+    font-size: 20px;
+    padding: 10px;
+}
+#info_score{
+    font-size: 60px;
+    padding: 0 10px 10px 10px;
+    color: red;
+}

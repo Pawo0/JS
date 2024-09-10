@@ -14,8 +14,19 @@ let cardArray = [
     {id: 'c11', value: '🐦‍'},
     {id: 'c12', value: '😻'}
 ]
+cardArray = cardArray.flatMap(el => [el, el])
 const grid = document.getElementById('grid');
+const info_score = document.getElementById('info_score');
+let score = 0;
 
+window.addEventListener('DOMContentLoaded', startGame)
+
+function startGame(){
+    info_score.textContent = '0';
+    score = 0;
+    shuffle(cardArray);
+    createBoard();
+}
 
 function shuffle(cards) {
     for (let i = cards.length - 1; i > 0; i--) {
@@ -25,6 +36,7 @@ function shuffle(cards) {
 }
 
 function createBoard() {
+    grid.innerHTML = '';
     cardArray.forEach((card) => {
         let cardElement = document.createElement('div');
         cardElement.classList.add("card");
@@ -47,12 +59,15 @@ function flipCard() {
 }
 
 function checkForMatch() {
+
     if (cardsChosen[0].id === cardsChosen[1].id) {
         cardsChosen.forEach(card => {
             card.classList.add('matched')
             cardsMatched.push(card);
         })
     } else {
+        score += 1;
+        info_score.textContent = score;
         cardsChosen.forEach(card => {
             card.classList.remove("flip");
         })
@@ -60,8 +75,3 @@ function checkForMatch() {
     cardsChosen.length = 0;
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    cardArray = cardArray.flatMap(el => [el, el])
-    shuffle(cardArray);
-    createBoard();
-})
