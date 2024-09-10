@@ -15,6 +15,7 @@ body{
 #cityInput{
     padding: 10px;
     font-size: 16px;
+    width: 200px;
 }
 #weatherForm button{
     padding: 10px 20px;
@@ -25,8 +26,26 @@ body{
     margin-top: 20px;
     font-size: 20px;
     background: linear-gradient(cornflowerblue, greenyellow);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: none;
     border-radius: 20px;
+    padding: 20px;
+}
+.suggestions-list{
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: scroll;
+    width: 224px;
+}
+.suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0;
 }
