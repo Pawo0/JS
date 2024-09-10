@@ -30,6 +30,8 @@ function add_to_list(){
         task.appendChild(del_task);
 
         tasks.appendChild(task);
+
+        add_text.value = "";
     }
     else{
         window.alert("Empty input!")
